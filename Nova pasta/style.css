@@ -1,0 +1,508 @@
+css
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #120b18;
+    color: white;
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    padding: 20px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(18, 11, 24, 0.85);
+
+    backdrop-filter: blur(10px);
+
+    z-index: 1000;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #f27ca6;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #f27ca6;
+}
+
+
+/* =========================
+   PÁGINA INICIAL
+========================= */
+
+.inicio {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 100px 30px 50px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #120b18,
+            #3a172d,
+            #180d22
+        );
+}
+
+.conteudo {
+    max-width: 850px;
+    z-index: 2;
+}
+
+.coracao {
+    font-size: 70px;
+
+    margin-bottom: 20px;
+
+    animation: pulsar 1.5s infinite;
+}
+
+.inicio h1 {
+    font-size: 58px;
+
+    margin-bottom: 25px;
+
+    letter-spacing: 1px;
+}
+
+.frase {
+    font-size: 23px;
+
+    line-height: 1.7;
+
+    color: #f8dce9;
+
+    margin-bottom: 35px;
+}
+
+.botao {
+    display: inline-block;
+
+    padding: 15px 35px;
+
+    background: #d85a8a;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    font-size: 17px;
+
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background: #ee79a5;
+
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   EFEITOS DE LUZ
+========================= */
+
+.brilho {
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    border-radius: 50%;
+
+    background: rgba(216, 90, 138, 0.18);
+
+    filter: blur(60px);
+}
+
+.brilho1 {
+    top: 10%;
+    left: 5%;
+}
+
+.brilho2 {
+    bottom: 5%;
+    right: 5%;
+}
+
+
+/* =========================
+   NOSSA HISTÓRIA
+========================= */
+
+.historia {
+    padding: 110px 30px;
+
+    background: #160d20;
+}
+
+.titulo-historia {
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: 0 auto 80px;
+}
+
+.titulo-historia span {
+    font-size: 45px;
+}
+
+.titulo-historia h2 {
+    font-size: 45px;
+
+    margin: 15px 0;
+}
+
+.titulo-historia p {
+    color: #dcbccc;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   LINHA DO TEMPO
+========================= */
+
+.timeline {
+    position: relative;
+
+    max-width: 950px;
+
+    margin: auto;
+}
+
+
+/* Linha central */
+
+.timeline::before {
+    content: "";
+
+    position: absolute;
+
+    width: 3px;
+
+    background: #d85a8a;
+
+    top: 0;
+    bottom: 0;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    border-radius: 10px;
+}
+
+
+/* =========================
+   MOMENTOS
+========================= */
+
+.momento {
+    width: 50%;
+
+    padding: 25px 45px;
+
+    position: relative;
+}
+
+.momento:nth-child(odd) {
+    left: 0;
+
+    text-align: right;
+}
+
+.momento:nth-child(even) {
+    left: 50%;
+}
+
+
+/* =========================
+   DATA
+========================= */
+
+.data {
+    color: #f27ca6;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    margin-bottom: 12px;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.card {
+    background: rgba(255, 255, 255, 0.06);
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+
+    padding: 28px;
+
+    border-radius: 20px;
+
+    backdrop-filter: blur(10px);
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+
+    border-color: #d85a8a;
+
+    box-shadow:
+        0 10px 30px rgba(216, 90, 138, 0.18);
+}
+
+.card h3 {
+    color: white;
+
+    margin-bottom: 13px;
+
+    font-size: 21px;
+}
+
+.card p {
+    color: #d8c6d0;
+
+    line-height: 1.7;
+
+    font-size: 16px;
+}
+
+
+/* =========================
+   CORAÇÕES DA LINHA
+========================= */
+
+.momento::after {
+    content: "♥";
+
+    position: absolute;
+
+    width: 40px;
+    height: 40px;
+
+    background: #d85a8a;
+
+    border-radius: 50%;
+
+    top: 25px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+
+    font-size: 15px;
+
+    box-shadow:
+        0 0 20px rgba(216, 90, 138, 0.5);
+}
+
+.momento:nth-child(odd)::after {
+    right: -20px;
+}
+
+.momento:nth-child(even)::after {
+    left: -20px;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    text-align: center;
+
+    padding: 35px 20px;
+
+    background: #0d0812;
+
+    color: #bda9b5;
+
+    font-size: 14px;
+}
+
+footer span {
+    color: #f27ca6;
+}
+
+
+/* =========================
+   ANIMAÇÃO DO CORAÇÃO
+========================= */
+
+@keyframes pulsar {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 18px 20px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+
+    /* INÍCIO */
+
+    .inicio h1 {
+        font-size: 38px;
+    }
+
+    .frase {
+        font-size: 19px;
+    }
+
+    .coracao {
+        font-size: 55px;
+    }
+
+
+    /* HISTÓRIA */
+
+    .historia {
+        padding: 80px 20px;
+    }
+
+    .titulo-historia h2 {
+        font-size: 35px;
+    }
+
+    .titulo-historia p {
+        font-size: 16px;
+    }
+
+
+    /* LINHA DO TEMPO */
+
+    .timeline::before {
+        left: 20px;
+    }
+
+    .momento,
+    .momento:nth-child(even),
+    .momento:nth-child(odd) {
+
+        width: 100%;
+
+        left: 0;
+
+        text-align: left;
+
+        padding-left: 60px;
+
+        padding-right: 0;
+    }
+
+
+    /* CORAÇÕES */
+
+    .momento::after,
+    .momento:nth-child(odd)::after,
+    .momento:nth-child(even)::after {
+
+        left: 0;
+
+        right: auto;
+    }
+
+
+    .card {
+        padding: 22px;
+    }
+
+}
